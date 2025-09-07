@@ -22,7 +22,7 @@ public class ExpenseController {
         this.userService = userService;
     }
 
-    // ✅ Add expense
+    //Add expense
     @PostMapping
     public ResponseEntity<Expense> addExpense(@RequestBody Expense expense, Authentication authentication) {
         User user = userService.findByUsername(authentication.getName());
@@ -30,14 +30,14 @@ public class ExpenseController {
         return ResponseEntity.ok(savedExpense);
     }
 
-    // ✅ Get all expenses for logged-in user
+    //Get all expenses for logged-in user
     @GetMapping
     public ResponseEntity<List<Expense>> getExpenses(Authentication authentication) {
         User user = userService.findByUsername(authentication.getName());
         return ResponseEntity.ok(expenseService.getUserExpenses(user));
     }
 
-    // ✅ Delete expense by ID
+    //Delete expense by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteExpense(@PathVariable Long id, Authentication authentication) {
         User user = userService.findByUsername(authentication.getName());
@@ -45,3 +45,4 @@ public class ExpenseController {
         return ResponseEntity.ok("Expense deleted successfully");
     }
 }
+
