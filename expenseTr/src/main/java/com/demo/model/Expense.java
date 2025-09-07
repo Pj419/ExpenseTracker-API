@@ -32,12 +32,13 @@ public class Expense {
     private User user;
 
 	public void setUser(User user2) {
-		// TODO Auto-generated method stub
+		
 		this.user = user2;
 	}
 
 	public Object getUser() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 }
+
