@@ -26,14 +26,14 @@ public class AuthController {
         this.jwtUtil = jwtUtil;
     }
 
-    // ✅ Register new user
+    // Register new user
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody User user) {
         User newUser = userService.registerUser(user.getUsername(), user.getPassword());
         return ResponseEntity.ok(newUser);
     }
 
-    // ✅ Login and generate JWT
+    //Login and generate JWT
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody User user) {
         try {
@@ -49,3 +49,4 @@ public class AuthController {
         }
     }
 }
+
