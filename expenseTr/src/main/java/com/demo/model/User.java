@@ -51,34 +51,33 @@ public class User implements UserDetails {
     private Set<Role> roles = new HashSet<>();
 
 	public String getUsername() {
-		// TODO Auto-generated method stub
+		
 		return this.username;
 	}
 
 	public String getPassword() {
-		// TODO Auto-generated method stub
 		return this.password;
 	}
 
 	public void setPassword(String encode) {
-		// TODO Auto-generated method stub
+		
 		this.password = encode;
 	}
 
 	public void setRoles(Set<Role> singleton) {
-		// TODO Auto-generated method stub
+		
 		this.roles = singleton;
 	}
 
 	public void setUsername(String username) {
-		// TODO Auto-generated method stub
+		
 		this.username = username;
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
 		return null;
 	}
     
 }
+
