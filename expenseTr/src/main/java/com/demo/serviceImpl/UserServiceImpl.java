@@ -50,10 +50,10 @@ public class UserServiceImpl implements UserService {
     }
 
 	public User registerUser(String username, CharSequence password) {
-		// TODO Auto-generated method stub
 		User newUser = new User();
 		newUser.setUsername(username);
 		newUser.setPassword(passwordEncoder.encode(password));
 		return userRepository.save(newUser);
 	}
 }
+
